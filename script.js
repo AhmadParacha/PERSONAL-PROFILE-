@@ -1,6 +1,6 @@
 // JavaScript Object containing the profile data
 const profileData = {
-    name: "Ahmad Paracha",
+    name: "Ahmad  Paracha",
     about: "Welcome to my professional profile. Here you will find information about my skills, projects, awards, certifications, and more.",
     profilePicture: "C:/Users/HP/OneDrive/Pictures/Screenshots/Screenshot 2024-09-15 231433.png",
     skills: {
