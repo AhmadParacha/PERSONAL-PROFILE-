@@ -1,4 +1,3 @@
-/* Basic styling for the page */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,6 +13,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 header nav ul {
@@ -58,15 +58,208 @@ iframe {
     height: 315px;
     border: none;
 }
-
+.HeroSection
+{
+    display: flex;
+    flex-direction:row ;
+    align-items: center;
+    gap: 500px;
+}
+.InnerHero
+{
+    display: flex;
+    flex-direction: column ;
+    gap: 0px;
+    text-align: center;
+}
 .profile-picture img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+}
+ooter {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Push footer to bottom when content is short */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    background-color: black;    /* Black background for the footer */
+    color: white;               /* White text color */
+    text-align: center;          /* Center the text */
+    padding: 20px 0;            /* Padding around the text */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;                  /* Remove default margin from the paragraph */
+    font-size: 14px;            /* Set a smaller font size for the footer text */
+}
+.language-buttons {
+    margin-left: auto; /* Push to the right */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.language-buttons button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.language-buttons button:hover {
+    background-color: #555;
 }
 
 @media (max-width: 600px) {
     header nav ul {
         flex-direction: column;
     }
+}
+/* General mobile styles */
+@media (max-width: 768px) {
+    .HeroSection {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .profile-picture img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .InnerHero {
+        gap: 10px;
+    }
+
+    /* Reduce iframe size for mobile */
+    iframe {
+        height: 200px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .HeroSection {
+        gap: 10px;
+    }
+
+    .profile-picture img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    iframe {
+        height: 180px;
+    }
+}
+
+/* Optional styles for even smaller screens */
+@media (max-width: 360px) {
+    header nav ul {
+        padding: 0;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .profile-picture img {
+        width: 70px;
+        height: 70px;
+    }
+
+    iframe {
+        height: 150px;
+    }
+}
+/* Hide navigation menu by default on small screens */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Hide the menu initially */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px; /* Place below the header */
+        width: 100%; /* Full width for mobile view */
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Style for the hamburger icon */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: rgb(255, 0, 0);
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    /* Center the menu items when shown on mobile */
+    header nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 15px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    /* Show the menu when the class is active */
+    .menu-active nav ul {
+        display: flex; /* Display the menu when toggled */
+    }
+}
+
+/* Hide the hamburger menu icon on larger screens */
+.menu-toggle {
+    display: none; /* Only show on smaller screens */
 }

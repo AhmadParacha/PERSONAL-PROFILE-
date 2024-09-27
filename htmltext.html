@@ -11,27 +11,42 @@
 </head>
 <body>
 
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#degrees">Degrees</a></li>
-                <li><a href="#side-projects">Side Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <span class="menu-toggle">☰</span> <!-- Hamburger Icon -->
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#degrees">Degrees</a></li>
+            <li><a href="#side-projects">Side Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
 
     <div class="container">
-        <div class="profile-picture" id="profile-picture"></div>
+        
+        <div class="HeroSection">
+             <div class="profile-picture" id="profile-picture"></div>
+             <div class="InnerHero">
+                <h1 id="name"></h1>
+                <h3 id="rank"></h3>
+             </div>
+             <div class="language-buttons">
+                <button id="btn-english">English</button>
+                <button id="btn-urdu">Urdu</button>
+                <button id="btn-french">French</button>
+            </div>
+        </div>
         
         <section id="about" class="section">
-            <h1 id="name"></h1>
+            <h1>Introduction</h1>
             <p id="about-text"></p>
         </section>
 
@@ -46,6 +61,7 @@
         <section id="projects" class="section">
             <h2>Projects</h2>
             <ul id="projects-list"></ul>
+            <p><strong></strong>GIT-HUB LINK :</strong> <a href="http://github.com/AhmadParacha/SOLITERY-GAME.git">CHESS GAME</a> 
         </section>
 
         <section id="awards" class="section">
@@ -69,13 +85,14 @@
         </section>
 
         <section id="side-projects" class="section">
-            <h2>Side Projects / Hackathons</h2>
+            <h2>Side Projects</h2>
             <ul id="side-projects-list"></ul>
+            <p> Built an e-commerce prototype that supports product listings, a shopping cart, and order management. This project was developed using React for the front end and Node.js with Express for the backend, along with MongoDB for data storage.</p>
         </section>
 
         <section id="contact" class="section">
             <h2>Contact</h2>
-            <p>Find me on social media:</p>
+            <p>Social Media</p>
             <div class="social-feed">
                 <a id="instagram-link" target="_blank">Instagram</a> |
                 <a id="snapchat-link" target="_blank">Snapchat</a>
@@ -88,5 +105,11 @@
         </section>
     </div>
     <script src="script.js"></script>
+
+    <footer>
+    <p>© 2024 Ahmad Paracha. All rights reserved.</p>
+</footer>
 </body>
 </html>
+
+
